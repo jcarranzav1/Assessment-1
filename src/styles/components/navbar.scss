@@ -1,0 +1,129 @@
+.navbar {
+	align-items: center;
+	background-color: rgba($nav-black, 1);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 10px 0;
+	position: relative;
+}
+.navbar-container {
+	align-items: center;
+	display: flex;
+	flex-wrap: inherit;
+	justify-content: space-between;
+	gap: 15px;
+	margin: 0 auto;
+	padding: 0 12px;
+	width: 100%;
+}
+.navbar__logo {
+	margin: 8px 16px 8px 24px;
+	padding: 5px 0;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 2.4rem;
+	text-decoration: none;
+	white-space: nowrap;
+	color: $white;
+}
+.navbar__btn {
+	background-color: transparent;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 0.25rem;
+	color: rgba(255, 255, 255, 0.55);
+	padding: 5px 12px;
+	font-size: 20px;
+	line-height: 1;
+	text-transform: none;
+	&:enabled {
+		cursor: pointer;
+	}
+	&:focus {
+		text-decoration: none;
+		outline: 0;
+		box-shadow: 0 0 0 0.25rem;
+	}
+}
+.navbar__btn-icon {
+	background-image: url('../../assets/icons/menu.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	vertical-align: middle;
+}
+
+.navbar-collapse {
+	flex-basis: 100%;
+	flex-grow: 1;
+	align-items: center;
+	margin-left: 14px;
+}
+
+.collapse {
+	&:not(.show) {
+		display: none;
+	}
+}
+
+.navbar-nav {
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	margin-bottom: 0;
+	padding-left: 0;
+}
+.nav__link {
+	display: block;
+	color: rgba($white, 0.55);
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 2.1rem;
+	text-decoration: none;
+	padding: 0.5rem 1rem;
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+		border-color 0.15s ease-in-out;
+
+	&.active {
+		color: $white;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.navbar-expand-lg {
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+	}
+	.navbar-expand-lg .navbar__btn {
+		display: none;
+	}
+	.navbar-expand-lg .navbar-collapse {
+		display: flex;
+		justify-content: flex-end;
+		margin-right: 35px;
+		flex-basis: auto;
+	}
+	.navbar-expand-lg .navbar-nav {
+		flex-direction: row;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.navbar-expand-md {
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+	}
+	.navbar-expand-md .navbar__btn {
+		display: none;
+	}
+	.navbar-expand-md .navbar-collapse {
+		display: flex;
+		justify-content: flex-end;
+		margin-right: 35px;
+		flex-basis: auto;
+	}
+	.navbar-expand-md .navbar-nav {
+		flex-direction: row;
+	}
+}

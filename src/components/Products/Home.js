@@ -1,16 +1,14 @@
-import { Alert } from 'react-bootstrap';
 import React from 'react';
 import { SyncLoader } from 'react-spinners';
 import { useFetch } from '../../hooks/useFetch';
-export const ProductsScreen = () => {
-	const [products, loading, error] = useFetch();
+export const Home = () => {
+	const [products, loading] = useFetch();
 	return (
 		<div>
 			<div className="container">
 				<p className="container__title animate__animated animate__fadeInDown">
 					Products
 				</p>
-				{error && <Alert variant="danger">{error}</Alert>}
 				{loading ? (
 					<div className="loading-container animate__animated animate__flash">
 						<div className="loading-info">
