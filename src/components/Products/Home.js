@@ -1,6 +1,7 @@
 import React from 'react';
 import { SyncLoader } from 'react-spinners';
 import { useFetch } from '../../hooks/useFetch';
+import { ProducList } from './ProducList';
 export const Home = () => {
 	const [products, loading] = useFetch();
 	return (
@@ -21,35 +22,7 @@ export const Home = () => {
 						</div>
 					</div>
 				) : (
-					<div className="container__cards ">
-						<div className="cards__row animate__animated animate__fadeIn">
-							{products.map((product, index) => (
-								<div key={index} className="cards__column">
-									<div className="product-card">
-										<div className="card-body">
-											<img
-												className="card-body__img"
-												src={product.image}
-												alt={product.title}></img>
-											<p className="card-body__title">
-												{product.title}
-											</p>
-										</div>
-										<div className="card-footer">
-											<p className="card-footer__timer">
-												00:00:00
-											</p>
-											<button
-												className="btn btn-primary"
-												disabled>
-												Go to Detail
-											</button>
-										</div>
-									</div>
-								</div>
-							))}
-						</div>
-					</div>
+					<ProducList products={products} />
 				)}
 			</div>
 		</div>
