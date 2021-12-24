@@ -23,3 +23,11 @@ body {
 .pointer {
 	cursor: pointer;
 }
+
+.animate__animated.animate__fadeInDown {
+	--animate-duration: 0.8s;
+}
+
+.animate__animated.animate__fadeIn {
+	--animate-duration: 1.2s;
+}
