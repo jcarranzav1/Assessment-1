@@ -1,9 +1,10 @@
 import React from 'react';
 import { SyncLoader } from 'react-spinners';
-import { useFetch } from '../../hooks/useFetch';
+import { useFetch } from '../hooks/useFetch';
 import { ProducList } from './ProducList';
 export const Home = () => {
 	const [products, loading] = useFetch();
+	console.log(products);
 	return (
 		<div>
 			<div className="container">

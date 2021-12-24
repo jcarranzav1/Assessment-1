@@ -1,7 +1,17 @@
 //colors
-$primary: #2b91e0;
+$primary: #0081d5;
 $dark-grey: #363636;
-$light-grey: #979897;
+$light-grey: #878787;
 $white: #fcfdfc;
 $black: #1a1a1a;
 $nav-black: #212529;
+
+$purple-gradient: linear-gradient(
+	45deg,
+	rgba(87, 29, 146, 1) 0%,
+	rgba(172, 25, 102, 1) 100%
+);
+$purple-gradient: linear-gradient(to bottom right, #c90a6d, #ff48a0);
+$blue1-gradient: linear-gradient(to bottom right, #5e5aec, #3f9efc);
+$blue2-gradient: linear-gradient(to bottom right, #6452e9, #639ff9);
+$shadow: 0 13px 26px rgba(#000, 0.2), 0 3px 6px rgba(#000, 0.2);

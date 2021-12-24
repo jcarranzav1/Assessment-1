@@ -1,16 +1,18 @@
 import { useEffect, useState } from 'react';
-import { getProducts } from '../apis/getProducts';
-export const useFetch = () => {
+import { getAllProducts, getProductsById } from '../apis/getProducts';
+
+export const useFetch = (id) => {
 	const [products, setProducts] = useState([]);
 	const [loading, setLoading] = useState(false);
 	const [error, setError] = useState('');
 
-	async function loadProducts() {
+	async function getProducts(id) {
 		try {
 			setLoading(true);
 			setError('');
-
-			const data = await getProducts();
+			const data = !!id
+				? await getProductsById(id)
+				: await getAllProducts();
 			setProducts(data);
 		} catch (err) {
 			setError(err.message || 'Error');
@@ -18,9 +20,10 @@ export const useFetch = () => {
 			setLoading(false);
 		}
 	}
+
 	useEffect(() => {
-		loadProducts();
-	}, []);
+		getProducts(id);
+	}, [id]);
 
 	return [products, loading, error];
 };

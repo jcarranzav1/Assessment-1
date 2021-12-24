@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-export const ProductCard = ({ image, title }) => {
+export const ProductCard = ({ id, image, title }) => {
 	return (
 		<div className="cards__column">
 			<div className="product-card">
@@ -13,9 +14,11 @@ export const ProductCard = ({ image, title }) => {
 				</div>
 				<div className="card-footer">
 					<p className="card-footer__timer">00:00:00</p>
-					<button className="btn btn-primary" disabled>
-						Go to Detail
-					</button>
+					<Link to={`/detail/${id}`}>
+						<button className="btn btn-primary">
+							Go to Detail
+						</button>
+					</Link>
 				</div>
 			</div>
 		</div>
