@@ -1,7 +1,8 @@
 import React from 'react';
 import { Navigate, useNavigate, useParams } from 'react-router-dom';
-import { useFetch } from '../hooks/useFetch';
 import { SyncLoader } from 'react-spinners';
+import { useIdProducts } from '../hooks/useIdProducts';
+
 export const Detail = () => {
 	const { id } = useParams();
 	const navigate = useNavigate();
@@ -10,7 +11,7 @@ export const Detail = () => {
 		navigate(-1);
 	};
 
-	const [products, loading] = useFetch(id);
+	const [products, loading] = useIdProducts(id);
 
 	if (!products) {
 		return <Navigate to="/home" />;

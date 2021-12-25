@@ -35,22 +35,22 @@ export const About = () => {
 					</ul>
 				</div>
 
-				<div class="card__social-icons">
-					<div class="social-icons">
+				<div className="card__social-icons">
+					<div className="social-icons">
 						<a href="https://github.com/jcarranzav1">
-							<i class="fab fa-github"></i>
+							<i className="fab fa-github"></i>
 						</a>
 					</div>
 
-					<div class="social-icons">
+					<div className="social-icons">
 						<a href="https://www.linkedin.com/in/jcarranzav">
-							<i class="fab fa-linkedin"></i>
+							<i className="fab fa-linkedin"></i>
 						</a>
 					</div>
 
-					<div class="social-icons">
+					<div className="social-icons">
 						<a href="https://twitter.com/jcarranzav98">
-							<i class="fab fa-twitter"></i>
+							<i className="fab fa-twitter"></i>
 						</a>
 					</div>
 				</div>
