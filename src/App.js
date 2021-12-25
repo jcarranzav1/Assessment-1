@@ -1,10 +1,10 @@
+/* eslint-disable linebreak-style */
 import React from 'react';
 import { AppRouter } from './routes/AppRouter';
-
 export const App = () => {
-	return (
-		<>
-			<AppRouter />
-		</>
-	);
+  return (
+    <>
+      <AppRouter />
+    </>
+  );
 };
