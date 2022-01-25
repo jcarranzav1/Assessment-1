@@ -11,7 +11,7 @@ export const ProductCard = ({ id, image, title }) => {
     let interval = null;
     interval = setInterval(() => {
       setTime((prevTime) => prevTime - 1);
-    }, 100);
+    }, 1000);
 
     if (time === 0) {
       clearInterval(interval);
