@@ -1,17 +1,17 @@
 import React from 'react';
 import { Navigate, useNavigate, useParams } from 'react-router-dom';
 import { SyncLoader } from 'react-spinners';
-import { useIdProducts } from '../hooks/useIdProducts';
+import Alert from 'react-bootstrap/Alert';
+import { useProductsId } from '../hooks/useProductId';
 
-export const Detail = () => {
+const Detail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-
-  const handleReturn = () => {
-    navigate(-1);
-  };
-
-  const [products, loading] = useIdProducts(id);
+  const {
+    data: products = [],
+    error = '',
+    loading = false,
+  } = useProductsId(id);
 
   if (!products) {
     return <Navigate to="/home" />;
@@ -22,6 +22,7 @@ export const Detail = () => {
 
   return (
     <>
+      {error && <Alert variant="danger">{error}</Alert>}
       {loading ? (
         <div className="loading-container animate__animated animate__flash">
           <div className="loading-info">
@@ -45,7 +46,10 @@ export const Detail = () => {
                 </div>
                 <p className="content__description">{description}</p>
                 <p className="content__price">{`Price: $${price}`}</p>
-                <button className="btn btn-primary" onClick={handleReturn}>
+                <button
+                  className="btn btn-primary"
+                  onClick={() => navigate(-1)}
+                >
                   Return
                 </button>
               </div>
@@ -56,3 +60,4 @@ export const Detail = () => {
     </>
   );
 };
+export default Detail;

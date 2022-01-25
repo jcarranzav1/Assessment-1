@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { getRandomNumber } from '../utils/utils';
-//asdas
+
 export const ProductCard = ({ id, image, title }) => {
   const randomTime = getRandomNumber(1, 4) * 60;
   const [time, setTime] = useState(randomTime);
@@ -11,7 +11,7 @@ export const ProductCard = ({ id, image, title }) => {
     let interval = null;
     interval = setInterval(() => {
       setTime((prevTime) => prevTime - 1);
-    }, 1000);
+    }, 100);
 
     if (time === 0) {
       clearInterval(interval);

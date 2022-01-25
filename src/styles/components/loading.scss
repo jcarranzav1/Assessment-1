@@ -1,19 +1,19 @@
 .loading-container {
-	display: flex;
-	width: 100%;
-	height: 70vh;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  width: 100%;
+  height: 70vh;
+  justify-content: center;
+  align-items: center;
 
-	.loading-info {
-		display: flex;
-		gap: 15px;
-		align-items: center;
+  .loading-info {
+    display: flex;
+    gap: 15px;
+    align-items: center;
 
-		p {
-			color: #36d7b7;
-			font-size: 4rem;
-			font-weight: 500;
-		}
-	}
+    p {
+      color: #36d7b7;
+      font-size: 4rem;
+      font-weight: 500;
+    }
+  }
 }
